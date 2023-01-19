@@ -2,7 +2,7 @@
 	import NavBar from '@components/navbar.svelte';
 </script>
 
-<NavBar />
+<NavBar/>
 
 <div class="leftInnerEdge">
 	<p>This is the homepage.</p>

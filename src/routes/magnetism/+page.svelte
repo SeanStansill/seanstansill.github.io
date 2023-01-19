@@ -3,6 +3,7 @@
 	import Accordion, { Panel, Header } from '@smui-extra/accordion';
 	import Katex from 'svelte-katex';
 	import Paper, { Title, Content } from '@smui/paper';
+	import Math from '@components/Math.svelte'
 
 	let paperStyle = 'background-color: var(--mdc-theme-background, #f8f8f8);';
 
@@ -71,7 +72,7 @@
 	</Accordion>
 </div>
 
-// Test Accordion for KaTeX
+<!-- Test Accordion for KaTeX -->
 <div>
 	<Accordion>
 		<Panel>

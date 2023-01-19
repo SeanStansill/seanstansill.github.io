@@ -7,7 +7,6 @@
 
 <NavBar />
 <div>
-	<!-- color='secondary' -->
 	<Paper square elevation="4" style={paperStyle}>
 		<Title>The Website</Title>
 		<Content>
@@ -34,7 +33,6 @@
 </div>
 
 <div>
-	<!-- color='secondary' -->
 	<Paper square style={paperStyle}>
 		<Title>The Website</Title>
 		<Content>

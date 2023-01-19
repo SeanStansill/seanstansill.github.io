@@ -3,7 +3,6 @@
 
 	export let navItems;
 
-	// Change this to implement smui classAdderBuilder
 	const navbarWidth =
 		'margin-left: 20%; margin-right: 20%; display: flex; justify-content: center; align-items: center;';
 </script>

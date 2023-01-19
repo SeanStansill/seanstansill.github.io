@@ -1,3 +1,9 @@
+// This is a Svelte store to check the window size.
+// It is used to reactively serve up content to a
+// user.
+
+// It is a Svelte alternative to a React hook.
+
 import { readable } from 'svelte/store';
 
 export const isMobile = readable(true, (set) => {

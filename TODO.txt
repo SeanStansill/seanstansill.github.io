@@ -1,0 +1,40 @@
+// Apply Prettier formatting
+
+// Run ESLint linting
+
+// Create JIRA workflow instead of this TODO
+
+// Deploy a +layout page (single listener, no constructing and destroying)
+// https://kit.svelte.dev/docs/routing
+
+// Change portfolio to projects (and list all my private github repos?)
+
+// Add more to about (personal, what I do/want to do)
+
+// Remove blog? (this can be for a deployed website with a backend)
+
+// Change CV to experience?
+
+// Add footer with links to github, linkedin, a full CV.pdf
+
+// Add new favicon
+
+// Semitransparent backgrounds (centre less so than margins w opaque paper/menu/button components)
+
+// Add parallax background
+// https://www.w3schools.com/howto/howto_css_parallax.asp
+// https://www.wix.com/blog/2019/08/what-is-parallax-scrolling-explained-with-examples/
+
+// Add static background? https://stackoverflow.com/questions/22702728/scrolling-text-over-static-image-css
+
+// On the magnetism page, add clickable menu/buttons below equations for the definition of each symbol.
+
+// Clean-up comments and the code generally.
+
+// Maybe turn this into a SPA and reactively add in / remove components.
+
+// Change magnetism page to "research"?
+
+// Dark theme for paper componpents which are set to a class (not sure how to do that)
+// Instead of relying on the browser, maybe add a toggle to a future footer? <input type="checkbox" on:click={toggleTheme} />
+// https://dev.to/lenaschnedlitz/create-a-simple-dark-mode-toggle-with-svelte-4b3g

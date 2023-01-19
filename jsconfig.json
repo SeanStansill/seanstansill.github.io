@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+             // name and path to aliases
+            "@components": ["src/lib/components"],
+            "@assets": ["public"],
+            "@src": ["src"],
+        }
+    },
+    "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]
+}

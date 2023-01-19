@@ -1,11 +1,9 @@
 <script>
-    import NavBar from '@components/navbar.svelte'
-
+	import NavBar from '@components/navbar.svelte';
 </script>
 
-<NavBar/>
+<NavBar />
 
-<div class='leftInnerEdge'>
-    <p>This is the homepage.</p>
-
+<div class="leftInnerEdge">
+	<p>This is the homepage.</p>
 </div>

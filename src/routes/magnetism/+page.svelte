@@ -1,5 +1,4 @@
 <script>
-	import NavBar from '@components/navbar.svelte';
 	import Accordion, { Panel, Header } from '@smui-extra/accordion';
 	import Katex from 'svelte-katex';
 	import Paper, { Title, Content } from '@smui/paper';
@@ -15,8 +14,6 @@
     \\left[ \\mathbf{\\mathrm{S}}_i \\times \\mathbf{\\mathrm{H}}_i + \\alpha \\mathbf{\\mathrm{S}}_i 
     \\times \\left(\\mathbf{\\mathrm{S}}_i \\times \\mathbf{\\mathrm{H}}_i\\right) \\right]`;
 </script>
-
-<NavBar />
 
 <div>
 	<Paper square style={paperStyle}>

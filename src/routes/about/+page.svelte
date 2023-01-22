@@ -1,11 +1,9 @@
 <script>
-	import NavBar from '@components/navbar.svelte';
 	import Paper, { Title, Content } from '@smui/paper';
 
 	let paperStyle = 'background-color: var(--mdc-theme-background, #f8f8f8);';
 </script>
 
-<NavBar />
 <div>
 	<Paper square elevation="4" style={paperStyle}>
 		<Title>The Website</Title>

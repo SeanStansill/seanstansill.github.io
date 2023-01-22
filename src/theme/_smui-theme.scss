@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /// WEBSITE CONSTANTS
 /////////////////////////////////////////////////////////////////////////////////////////
-/// 
+///
 // This means only these variables need to be changed to change the whole website
 $outermargin: 20%;
 $innermargin: 30%;
@@ -10,33 +10,32 @@ $elementwidth: 800px;
 
 @use 'sass:color';
 
-
 @use '@material/theme/color-palette';
 
 // Svelte Colors!
 @use '@material/theme/index' as theme with (
-  $primary: #000000,
-  $secondary: #adadad,
-  $surface: rgb(202, 202, 202),
-  $background: rgb(255, 255, 255),
-  $error: color-palette.$red-900
+	$primary: #000000,
+	$secondary: #adadad,
+	$surface: rgb(202, 202, 202),
+	$background: rgb(255, 255, 255),
+	$error: color-palette.$red-900
 );
 
 /////////////////////////////////////////////////////////////////////////////////////////
 /// SMUI CLASSES FOR MOBILE
 /////////////////////////////////////////////////////////////////////////////////////////
 
-.smui-paper-mobile  {
-  background-color: var(--mdc-theme-background, #f8f8f8);
-  @extend .smui-paper;
-  margin: 0 auto 24px;
-  margin-top: $elementtopmargin;
+.smui-paper-mobile {
+	background-color: var(--mdc-theme-background, #f8f8f8);
+	@extend .smui-paper;
+	margin: 0 auto 24px;
+	margin-top: $elementtopmargin;
 }
 
-.smui-accordion-mobile  {
-  @extend .smui-accordion;
-  margin: 0 auto 24px;
-  margin-top: $elementtopmargin;
+.smui-accordion-mobile {
+	@extend .smui-accordion;
+	margin: 0 auto 24px;
+	margin-top: $elementtopmargin;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -44,59 +43,56 @@ $elementwidth: 800px;
 /////////////////////////////////////////////////////////////////////////////////////////
 
 // This is a neat SCSS way to add to an existing class globally during theming
-.smui-paper  {
-  background-color: var(--mdc-theme-background, #f8f8f8);
-  @extend .smui-paper;
-  margin-top: $elementtopmargin;
-  max-width: $elementwidth;
-  margin: 0 auto 24px;
+.smui-paper {
+	background-color: var(--mdc-theme-background, #f8f8f8);
+	@extend .smui-paper;
+	margin-top: $elementtopmargin;
+	max-width: $elementwidth;
+	margin: 0 auto 24px;
 }
 
-.smui-accordion  {
-  @extend .smui-accordion;
-  margin-top: $elementtopmargin;
-  max-width: $elementwidth;
-  margin: 0 auto 24px;
+.smui-accordion {
+	@extend .smui-accordion;
+	margin-top: $elementtopmargin;
+	max-width: $elementwidth;
+	margin: 0 auto 24px;
 }
-
 
 // If changing edge, also need to change navbarWidth in navbar_desktop.svelte
 /////////////////////////////////////////////////////////////////////////////////////////
 /// CUSTOM CLASSES
 /////////////////////////////////////////////////////////////////////////////////////////
 .edge {
-  margin-left: $outermargin; 
-  margin-right: $outermargin;
+	margin-left: $outermargin;
+	margin-right: $outermargin;
 }
 
 .innerEdge {
-  margin-left: $innermargin;
-  margin-right: $innermargin;
+	margin-left: $innermargin;
+	margin-right: $innermargin;
 }
 .leftEdge {
-  margin-left: $innermargin;
-  margin-right: $innermargin;
+	margin-left: $innermargin;
+	margin-right: $innermargin;
 }
 .leftInnerEdge {
-  margin-left: $outermargin;
-  margin-right: $outermargin;
+	margin-left: $outermargin;
+	margin-right: $outermargin;
 }
 .inverseCode {
-  background-color: black; 
-  color: white;
+	background-color: black;
+	color: white;
 }
-
-
 
 html,
 body {
-  background-color: theme.$background;
-  color: theme.$on-surface;
+	background-color: theme.$background;
+	color: theme.$on-surface;
 }
 
 a {
-  color: #40b3ff;
+	color: #40b3ff;
 }
 a:visited {
-  color: color.scale(#40b3ff, $lightness: -35%);
+	color: color.scale(#40b3ff, $lightness: -35%);
 }

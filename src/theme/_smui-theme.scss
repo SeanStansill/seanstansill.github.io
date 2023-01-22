@@ -66,10 +66,15 @@ $elementwidth: 800px;
 	margin-left: $outermargin;
 	margin-right: $outermargin;
 }
-
 .innerEdge {
 	margin-left: $innermargin;
 	margin-right: $innermargin;
+}
+.innerEdgeCentred {
+	margin-left: $innermargin;
+	margin-right: $innermargin;
+	display: flex;
+	justify-content: center;
 }
 .leftEdge {
 	margin-left: $innermargin;

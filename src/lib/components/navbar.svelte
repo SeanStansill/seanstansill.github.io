@@ -19,8 +19,11 @@
 		{ label: 'Blog', href: '/blog' },
 		{ label: 'About', href: '/about' }
 	];
+	let scroll;
 </script>
 
-<div>
+<svelte:window bind:scrollY={scroll}/>
+
+<div style:transform={`translate3d(0, ${scroll - 8}px, 0)`} style:background='white'>
 	<svelte:component this={selectedNav} {navItems}/>
 </div>

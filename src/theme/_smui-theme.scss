@@ -36,6 +36,8 @@ $elementwidth: 800px;
 	@extend .smui-accordion;
 	margin: 0 auto 24px;
 	margin-top: $elementtopmargin;
+	position:absolute;
+	z-index: -1;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -56,6 +58,8 @@ $elementwidth: 800px;
 	margin-top: $elementtopmargin;
 	max-width: $elementwidth;
 	margin: 0 auto 24px;
+	position:absolute;
+	z-index: -1;
 }
 
 // If changing edge, also need to change navbarWidth in navbar_desktop.svelte

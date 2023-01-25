@@ -24,6 +24,6 @@
 
 <svelte:window bind:scrollY={scroll}/>
 
-<div style:transform={`translate3d(0, ${scroll - 8}px, 0)`} style:background='white'>
+<div style:transform={`translate3d(0, ${scroll - 8}px, 0)`} style:background='white' style:overflow='visible' style:z-index='10' style:position='relative'>
 	<svelte:component this={selectedNav} {navItems}/>
 </div>

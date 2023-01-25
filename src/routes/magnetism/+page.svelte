@@ -9,10 +9,14 @@
 
 	let paperStyle = 'background-color: var(--mdc-theme-background, #f8f8f8);';
 
-	let llg = `\\frac{\\partial \\mathbf{\\mathrm{S}}_i}{\\partial t} = - |\\gamma|
+	let Si = `\\mathbf{\\mathrm{S}}_i`;
+	let Hi = `\\mathbf{\\mathrm{H}}_i`;
+
+	let Heff = `\\mathbf{\\mathrm{H}}_i = \\frac{\\partial E}{\\partial \\mathbf{\\mathrm{S}}_i}`
+
+	let llg = `\\frac{\\partial {\\mathbf{\\mathrm{S}}_i}}{\\partial t} = - |\\gamma|
     \\left[ \\mathbf{\\mathrm{S}}_i \\times \\mathbf{\\mathrm{H}}_i + \\alpha \\mathbf{\\mathrm{S}}_i
     \\times \\left(\\mathbf{\\mathrm{S}}_i \\times \\mathbf{\\mathrm{H}}_i\\right) \\right]`;
-
 
 	// Here we want to initialize bool which we
 	// pass to accordion to open it when clicking a link
@@ -22,7 +26,7 @@
 <Banner {image_url}/>
 
 <div style= 'margin-top: 10px'>
-	<Accordion>
+	<Accordion style='z-index:0'>
 		<Panel>
 			<Header>TL;DR</Header>
 			<Content>
@@ -100,8 +104,8 @@
 			is the only way to include temperature by using random numbers (often called a stochastic
 			process), which means these simulations can predict finite temperature behaviour very accurately.<br />
 			<br/>
-			The equation of motion my simulations solve is called the <a href='#llg' on:click={() => (llg_open = true)}>Landau-Liftshiz equation</a>. Each magnetic moment has its own
-			equation (denoted <Katex equation='i'/>), and which is coupled to others via the magnetic
+			The equation of motion my simulations solve is called the <a href='#llg' on:click={() => (llg_open = true)}>Landau-Liftshiz equation</a>.
+			Each magnetic moment has its own equation (denoted <Katex equation='i'/>), and which is coupled to others via the magnetic
 			interactions.
 		</Content>
 	</Paper>
@@ -113,6 +117,8 @@
 				<Header>Landau-Liftshiz Equation</Header>
 				<Content>
 					<Katex equation={llg} displayMode/>
+					where <Katex equation={Si}/> is the classical spin vector for the <Katex equation={'i'}/> spin, <Katex equation={Hi}/> is
+					the effective magnetic field (<Katex equation={Heff}/>)
 				</Content>
 			</Panel>
 		</Accordion>

@@ -2,17 +2,12 @@
 	import Accordion, { Panel, Header } from '@smui-extra/accordion';
 	import Katex from '@components/Katex.svelte';
 	import Paper, { Title, Content } from '@smui/paper';
-	import Math from '@components/Math.svelte'
 	import Banner from '@components/banner.svelte';
 
 	const image_url = '/images/blackboard_medium.jpg';
 	//const image_url = '/images/hdd_medium_cropped.jpg';
 
 	let paperStyle = 'background-color: var(--mdc-theme-background, #f8f8f8);';
-
-	let testEq = `\\begin{gather}E = {mc^2} \\\\
-                \\langle n \\rangle_{T} = \\int \\frac{\\epsilon_{k}}{\\mathrm{e}^{\\epsilon_{k} / k_B T} - 1} dk
-                \\end{gather}`;
 
 	let llg = `\\frac{\\partial \\mathbf{\\mathrm{S}}_i}{\\partial t} = - |\\gamma|
     \\left[ \\mathbf{\\mathrm{S}}_i \\times \\mathbf{\\mathrm{H}}_i + \\alpha \\mathbf{\\mathrm{S}}_i
@@ -21,14 +16,15 @@
 
 <Banner {image_url}/>
 
-<div>
+<div style= 'margin-top: 10px'>
 	<Accordion>
 		<Panel>
 			<Header>TL;DR</Header>
 			<Content>
 				My PhD is at the intersection of computer science, maths, and physics.
-				I create, maintain and develop computer programs that simulate magnetic materials at the atomic level and are
-				deployed on HPC systems using CPU and GPU resources. I'm highly experienced in C++ and CUDA for production simulations,
+				I create, maintain and develop computer programs that simulate magnetic materials at the atomic level by solving 
+				systems of stochastic differential equations (sometimes millions simultaneously). These are deployed on HPC 
+				systems using CPU and GPU resources. I'm highly experienced in C++ and CUDA for production simulations,
 				and high-performance Python for prototyping new algorithms, signal processing, symbolic maths, and data
 				analysis and visualisation. I also use high level mathematics, physics and quantum mechanics to develop
 				new highly efficient algorithms and create new theories.<br/>
@@ -61,7 +57,7 @@
 </div>
 
 
-<div style= 'margin-top: 10px'>
+<div>
 	<Paper square elevation='4'  style={paperStyle}>
 		<!-- Does this sound like I'm being mean? -->
 		<Title>Magnetism for non-scientists</Title>
@@ -114,33 +110,3 @@
 		</Panel>
 	</Accordion>
 </div>
-
-<!-- Test Accordion for KaTeX -->
-<div>
-	<Accordion>
-		<Panel>
-			<Header>Einstein is great</Header>
-			<Content>
-				<Katex equation={testEq} displayMode/>
-			</Content>
-		</Panel>
-	</Accordion>
-</div>
-
-<style>
-	#backgound { 
-		background-image: url(./images/grad.gif); 
-		background-attachment: fixed; 
-
-		/* 
-		  the three following items below do the following: 
-			a) fix the width and height of the containing div
-			   to be smaller than the width and height of the content.
-			b) we set the overflow style so that when the content is
-			   bigger than the containing element scroll bars appear
-			   to allow users to scroll the element contents. 
-		*/
-		height:200px; 
-		width:300px; 
-		overflow:scroll; }    
-</style>

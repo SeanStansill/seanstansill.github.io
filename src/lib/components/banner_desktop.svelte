@@ -4,8 +4,10 @@
     let scroll;
 </script>
 
-<div class='outerEdgeCentred'>
-    <div class='background_desktop' style='background-image: url({image_url})' style:transform={`translate3d(0, ${scroll * -0.8}px, 0)`}/>
+<svelte:window bind:scrollY={scroll}/>
+
+<div class='outerEdgeCentred' style='background-color:white; z-index=-1; position:relative;'>
+    <img src='{image_url}' alt='Page banner' class='banner_desktop' style:transform={`translate3d(0, ${scroll * 0.3}px, 0)`}/>
 </div>
 
 
@@ -17,5 +19,13 @@
         background-position: center 0%;
         background-repeat: no-repeat; 
         background-size: contain;
+        overflow: hidden;
+    }
+    .banner_desktop {
+        width: 100%;
+        height:400px;
+        object-fit: cover;
+        object-position: center 0%;;
+        overflow: hidden;
     }
 </style>

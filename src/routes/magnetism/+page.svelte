@@ -7,7 +7,7 @@
 	const image_url = '/images/blackboard_medium.jpg';
 	//const image_url = '/images/hdd_medium_cropped.jpg';
 
-	let paperStyle = 'background-color: var(--mdc-theme-background, #f8f8f8);';
+	let paperStyle = 'background-color: var(--mdc-theme-background, #f8f8f8); z-index:0;';
 
 	let Si = `\\mathbf{\\mathrm{S}}_i`;
 	let Hi = `\\mathbf{\\mathrm{H}}_i`;
@@ -130,7 +130,7 @@
 	<Paper square elevation='4'  style={paperStyle}>
 	<Content>
 		In maths, this problem is called a system of linear differential equations. Small systems can be solved analytically (by hand using algebra)
-		but here the system is too large, and it is <i>stochastic</i> which means it must be solved numerically (approximate solutions using numbers instead
+		but here the system is too large, and it is <em>stochastic</em> which means it must be solved numerically (approximate solutions using numbers instead
 		of symbols) on a computer. <br/>
 		<br/>
 		These systems are too big even for standard numerical software packages used by mathematicians (Mathematica, Maple, etc).

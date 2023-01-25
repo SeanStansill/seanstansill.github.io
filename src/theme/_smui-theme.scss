@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 ///
 // This means only these variables need to be changed to change the whole website
-$outermargin: 20%;
+$outermargin: 10%;
 $innermargin: 30%;
 $elementtopmargin: 20px;
 $elementwidth: 800px;
@@ -51,6 +51,8 @@ $elementwidth: 800px;
 	margin-top: $elementtopmargin;
 	max-width: $elementwidth;
 	margin: 0 auto 24px;
+	position:relative;
+	z-index: 0;
 }
 
 .smui-accordion {

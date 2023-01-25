@@ -45,8 +45,8 @@
 			energy is being spent on the important stuff, my projects always aim to create value (whether that be value in 
 			business, or in important new knowledge/tools in research), my work is always to the highest standard and I own my mistakes. <br/>
 			<br/>
-			Studying a Masters taught me how to answer tough questions. Completing a PhD taught me how to ask the right questions to create
-			value and push boundaries.
+			<strong>Studying a Masters taught me how to answer tough questions. Completing a PhD taught me how to ask the right questions to create
+			value and push boundaries.</strong>
 		</Content>
 	</Paper>
 </div>

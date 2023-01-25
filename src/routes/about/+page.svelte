@@ -32,10 +32,21 @@
 
 <div>
 	<Paper square style={paperStyle}>
-		<Title>The Website</Title>
+		<Title>Mission Statement</Title>
 		<Content>
-			By adding the <code class="inverseCode">square</code> property, the paper gains sharper corners
-			and can be used to intimidate foes.
+			I made this website because I want to better advertise myself &ndash; my job role is a postgraduate researcher
+			but my day-to-day looks more like a researcher/engineer/developer in a start-up. This often gets lost in translation
+			due to university jargon and the variation between individual PhD projects.<br/>
+			<br/>
+			I aim to be at the forefront, building the tools and technologies of tomorrow to better living standards and to reduce
+			our impact on the planet. The skills I've developed during my PhD are applicable to any industry; IP awareness, critical
+			thinking, problem solving, team work, communication skills, project management and even more technical skills. My 
+			personal work ethic are incredibly valuable; I ensure my workflow is as efficient as possible to make sure my 
+			energy is being spent on the important stuff, my projects always aim to create value (whether that be value in 
+			business, or in important new knowledge/tools in research), my work is always to the highest standard and I own my mistakes. <br/>
+			<br/>
+			Studying a Masters taught me how to answer tough questions. Completing a PhD taught me how to ask the right questions to create
+			value and push boundaries.
 		</Content>
 	</Paper>
 </div>

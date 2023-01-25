@@ -75,6 +75,11 @@ $elementwidth: 800px;
 	margin-right: $innermargin;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+}
+.outerEdgeCentred {
+	margin-left: $outermargin;
+	margin-right: $outermargin;
 }
 .leftEdge {
 	margin-left: $innermargin;

@@ -5,7 +5,7 @@
 </script>
 
 <div>
-	<Paper square elevation="4" style={paperStyle}>
+	<Paper square elevation='4' style={paperStyle}>
 		<Title>The Website</Title>
 		<Content>
 			This website was built using the following tech stack:

@@ -5,7 +5,8 @@
 			// name and path to aliases
 			"@components": ["src/lib/components"],
 			"@assets": ["public"],
-			"@src": ["src"]
+			"@src": ["src"],
+			"@static": ["static"]
 		}
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]

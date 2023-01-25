@@ -1,8 +1,12 @@
 <script>
 	import Accordion, { Panel, Header } from '@smui-extra/accordion';
-	import Katex from 'svelte-katex';
+	import Katex from '@components/Katex.svelte';
 	import Paper, { Title, Content } from '@smui/paper';
 	import Math from '@components/Math.svelte'
+	import Banner from '@components/banner.svelte';
+
+	const image_url = '/images/blackboard_medium.jpg';
+	//const image_url = '/images/hdd_medium_cropped.jpg';
 
 	let paperStyle = 'background-color: var(--mdc-theme-background, #f8f8f8);';
 
@@ -15,8 +19,10 @@
     \\times \\left(\\mathbf{\\mathrm{S}}_i \\times \\mathbf{\\mathrm{H}}_i\\right) \\right]`;
 </script>
 
-<div>
-	<Paper square style={paperStyle}>
+<Banner {image_url}/>
+
+<div style= 'margin-top: 10px'>
+	<Paper square elevation='4'  style={paperStyle}>
 		<!-- Does this sound like I'm being mean? -->
 		<Title>Magnetism for non-scientists</Title>
 		<Content>
@@ -53,7 +59,7 @@
 			temperature behaviour very accurately.<br />
 			<br />
 			The equation of motion is called the Landau-Liftshiz equation. Each magnetic moment has its own
-			equation (denoted <Katex>i</Katex>), and which is coupled to others via the magnetic
+			equation (denoted <Katex equation='i'/>), and which is coupled to others via the magnetic
 			interactions.
 		</Content>
 	</Paper>
@@ -63,7 +69,7 @@
 		<Panel>
 			<Header>Landau-Liftshiz Equation</Header>
 			<Content>
-				<Katex displayMode>{llg}</Katex>
+				<Katex equation={llg} displayMode/>
 			</Content>
 		</Panel>
 	</Accordion>
@@ -75,8 +81,26 @@
 		<Panel>
 			<Header>Landau-Liftshiz Equation</Header>
 			<Content>
-				<Katex displayMode>{testEq}</Katex>
+				<Katex equation={testEq} displayMode/>
 			</Content>
 		</Panel>
 	</Accordion>
 </div>
+
+<style>
+	#backgound { 
+		background-image: url(./images/grad.gif); 
+		background-attachment: fixed; 
+
+		/* 
+		  the three following items below do the following: 
+			a) fix the width and height of the containing div
+			   to be smaller than the width and height of the content.
+			b) we set the overflow style so that when the content is
+			   bigger than the containing element scroll bars appear
+			   to allow users to scroll the element contents. 
+		*/
+		height:200px; 
+		width:300px; 
+		overflow:scroll; }    
+</style>

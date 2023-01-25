@@ -90,7 +90,7 @@
 			devices. Trying to measure single atoms in a bar magnet is hard, even for the best labs in the
 			world. So, scientists (including me) are trying to model them using computer programs.<br />
 			<br/>
-			Scientists broadly have two different approaches to this problem. Some study the most fundamental
+			Physicists broadly have two different approaches to this problem. Some study the most fundamental
 			quantum mechanical problems using techniques like quantum monte carlo but these are limited to
 			~100 atoms and it is hard to use on electrical conductors. Others study much larger systems using 
 			finite element and finite difference methods which can be recreated in a lab. These methods can be 
@@ -118,9 +118,24 @@
 				<Content>
 					<Katex equation={llg} displayMode/>
 					where <Katex equation={Si}/> is the classical spin vector for the <Katex equation={'i'}/> spin, <Katex equation={Hi}/> is
-					the effective magnetic field (<Katex equation={Heff}/>)
+					the effective magnetic field (<Katex equation={Heff}/>) which contains information about the magnetic interactions, 
+					<Katex equation='\gamma'/> is the gyromagnetic ratio of an electron, and <Katex equation='\alpha'/> is the 
+					dimensionless damping parameter.
 				</Content>
 			</Panel>
 		</Accordion>
 	</a>
+</div>
+<div>
+	<Paper square elevation='4'  style={paperStyle}>
+	<Content>
+		In maths, this problem is called a system of linear differential equations. Small systems can be solved analytically (by hand using algebra)
+		but here the system is too large, and it is <i>stochastic</i> which means it must be solved numerically (approximate solutions using numbers instead
+		of symbols) on a computer. <br/>
+		<br/>
+		These systems are too big even for standard numerical software packages used by mathematicians (Mathematica, Maple, etc).
+		Instead, we must create our own custom software using high level computer science principles to optimise the calculations, and modern software
+		development workflows to ensure it is rigorously tested, and development can happen quickly.
+	</Content>
+	</Paper>
 </div>

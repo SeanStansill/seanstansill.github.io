@@ -11,7 +11,7 @@
 			This website was built using the following tech stack:
 			<ul>
 				<li>Svelte</li>
-				<li>MathJax</li>
+				<li>KaTeX</li>
 				<li>Vite</li>
 				<li>Sveltekit</li>
 				<li>SCSS</li>

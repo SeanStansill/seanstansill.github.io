@@ -9,7 +9,7 @@
     // This prop will link to a page-specific url
     export let image_url;
 
-	// Reactive blocks are the cleanest implementation
+	// Pick which view dependent on the device viewport
 	let selectedNav;
 	$: selectedNav = $isMobile ? BannerMobile : BannerDesktop;
 

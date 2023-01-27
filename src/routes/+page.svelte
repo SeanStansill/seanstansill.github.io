@@ -1,7 +1,19 @@
 <script>
+	import Paper, { Title, Content } from '@smui/paper';
+	import Banner from '@components/banner.svelte';
 
+const image_url = '/images/blackboard_medium.jpg';
+	
+	let paperStyle = 'background-color: var(--mdc-theme-background, #f8f8f8);';
 </script>
 
-<div class="leftInnerEdge">
-	<p>This is the homepage.</p>
+<div>
+	<Paper square elevation='4'  style={paperStyle}>
+		<!-- Does this sound like I'm being mean? -->
+		<Title>Under Construction</Title>
+		<Content>
+			<br />
+			Oops! Looks like I haven't built this part of the site yet.
+		</Content>
+	</Paper>
 </div>

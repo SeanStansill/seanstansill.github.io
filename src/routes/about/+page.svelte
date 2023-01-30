@@ -17,10 +17,12 @@
 				<li>SCSS</li>
 			</ul>
 			Svelte Material UI&ndash;a component library&ndash;was also used. The site is fully accessible
-			and reactive to the device visiting the page. The site has been built with the environment in mind&ndash;only
-			the most lightweight and efficient technologies have been used.<br />
-			<br />
-			See below to check out how much CO<sub>2</sub> is generated per visit to this site!
+			and reactive to the device visiting the page. Scientific literature has been cited throughout the site,
+			all links are to open-access versions of the publications for accessibility purposes.<br/>
+			<br/>
+			This site has been built with the environment in mind&ndash;only the most lightweight and efficient 
+			technologies have been used, and media has been heavily optimised. See below to check out how much 
+			CO<sub>2</sub> is generated per visit to this site!
 		</Content>
 	</Paper>
 </div>

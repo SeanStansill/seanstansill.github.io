@@ -14,7 +14,7 @@
 	>
 	<!-- Loop through each item in the nav-bar -->
 	{#each navItems as item}
-		<Button href={item.href} color="secondary" style="flex-grow: 1;" ripple={true}>
+		<Button href={item.href} style="color:dimgrey; flex-grow: 1;" ripple={true}>
 			<Label>{item.label}</Label>
 		</Button>
 	{/each}

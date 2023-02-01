@@ -1,6 +1,7 @@
 <script>
 	import Paper, { Title, Content } from '@smui/paper';
 	import Banner from '@components/banner.svelte';
+	import AuthorProfile from '@components/author_profile.svelte';
 
 	const image_url = '/images/galway_coral_beach4.jpg';
 	//const image_url = '/images/brimham_rocks2.jpg';
@@ -9,8 +10,9 @@
 </script>
 
 <Banner {image_url}/>
+<AuthorProfile/>
 
-<div>
+<div class='body_paper'>
 	<Paper square elevation='4'  style={paperStyle}>
 		<!-- Does this sound like I'm being mean? -->
 		<Title>Under Construction</Title>
@@ -20,3 +22,13 @@
 		</Content>
 	</Paper>
 </div>
+
+<style>
+	.body_paper {
+	width: 100%;
+	height:400px;
+	object-fit: cover;
+	object-position: center 10%;
+	overflow: hidden;
+	}
+</style>

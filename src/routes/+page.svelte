@@ -10,7 +10,10 @@
 </script>
 
 <Banner {image_url}/>
-<AuthorProfile/>
+
+<div>
+	<AuthorProfile/>
+</div>
 
 <div class='body_paper'>
 	<Paper square elevation='4'  style={paperStyle}>
@@ -25,10 +28,13 @@
 
 <style>
 	.body_paper {
-	width: 100%;
+	width: 40%;
 	height:400px;
-	object-fit: cover;
-	object-position: center 10%;
-	overflow: hidden;
+	display: inline-block;
+	padding-left:30%;
+	padding-top:0;
+	position:relative;
+	overflow: visible;
+	margin: 0 auto;
 	}
 </style>

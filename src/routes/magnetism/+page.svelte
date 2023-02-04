@@ -18,9 +18,12 @@
     \\left[ \\mathbf{\\mathrm{S}}_i \\times \\mathbf{\\mathrm{H}}_i + \\alpha \\mathbf{\\mathrm{S}}_i
     \\times \\left(\\mathbf{\\mathrm{S}}_i \\times \\mathbf{\\mathrm{H}}_i\\right) \\right]`;
 
+	let hamiltonian = `\\mathcal{H} = -\\frac{1}{2} \\sum_{i,j} \\mathbf{\\mathrm{S}}_i \\cdot J_{ij} \\cdot \\mathbf{\\mathrm{S}}_j -\\sum_{i} K_i \\left( \\mathbf{\\mathrm{S}}_i \\cdot \\mathrm{\\hat{z}} \\right)^2`;
+
 	// Here we want to initialize bool which we
 	// pass to accordion to open it when clicking a link
 	let llg_open = false;
+	let hamiltonian_open = false;
 </script>
 
 <Banner {image_url}/>
@@ -134,8 +137,28 @@
 		of symbols) on a computer. <br/>
 		<br/>
 		These systems are too big even for standard numerical software packages used by mathematicians (Mathematica, Maple, etc).
-		Instead, we must create our own custom software using high level computer science principles to optimise the calculations, and modern software
-		development workflows to ensure it is rigorously tested, and development can happen quickly.
+		Instead, we must create our own custom software using high level computer science principles to optimise the calculations, and we use modern software
+		development workflows to ensure it is rigorously tested, and development can happen quickly. <br/>
+		<br/>
+		The material specific term in the above equation is the effective, local field. We call it an <em>effective</em> field because it contains all the energy terms
+		, but it is written as a field (even if the energy term isn't an applied field). This field is <em>local</em> because the value of the field is different for each spin
+		due to the interactions with the spins in its vicinity. The energy is written as a Hamiltonian (a mathematical construction for the total energy). Below is an example 
+		<a href='#hamiltonian' on:click={() => (hamiltonian_open = true)}>Hamiltonian</a> for a fictitious ferromagnet.
 	</Content>
 	</Paper>
+</div>
+<div>
+	<a id='hamiltonian'>
+		<Accordion >
+			<Panel bind:open={hamiltonian_open}>
+				<Header>Example Hamiltonian</Header>
+				<Content>
+					<Katex equation={hamiltonian} displayMode/>
+					where <Katex equation={'J_{ij}'}/> is the exchange constant between spin <Katex equation={'i'}/> and spin <Katex equation={'j'}/>, <Katex equation={'J > 0'}/> corresponds with ferromagnetic coupling
+					(parallel alignment) and <Katex equation={'J < 0'}/> is antiferromagnetic coupling (anti-parallel alignment), <Katex equation={'K_i'}/> is the anisotropy constant for the <Katex equation={'i'}/>-th spin.
+					<Katex equation={'K > 0'}/> means spins prefer to point along the <Katex equation={'z'}/>-direction and <Katex equation={'K < 0'}/> means spins prefer to lie in the <Katex equation={'xy'}/>-plane.
+				</Content>
+			</Panel>
+		</Accordion>
+	</a>
 </div>

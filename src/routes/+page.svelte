@@ -10,10 +10,7 @@
 </script>
 
 <Banner {image_url}/>
-
-<div>
-	<AuthorProfile/>
-</div>
+<AuthorProfile/>
 
 <div class='body_paper'>
 	<Paper square elevation='4'  style={paperStyle}>
@@ -30,11 +27,11 @@
 	.body_paper {
 	width: 40%;
 	height:400px;
-	display: inline-block;
+	display: inline;
 	padding-left:30%;
 	padding-top:0;
 	position:relative;
-	overflow: visible;
+	overflow: hidden;
 	margin: 0 auto;
 	}
 </style>

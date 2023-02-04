@@ -35,6 +35,6 @@
         width: 9%;  
         padding-right: 10px;
         position: fixed;
-        overflow: visible;
+        overflow: hidden;
     }
 </style>

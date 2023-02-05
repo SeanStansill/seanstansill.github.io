@@ -36,5 +36,7 @@
         padding-right: 10px;
         position: fixed;
         overflow: hidden;
+        display: block;
+        z-index:1;
     }
 </style>

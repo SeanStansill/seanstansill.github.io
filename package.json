@@ -45,6 +45,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fortawesome/free-brands-svg-icons": "^6.2.1",
+		"@fortawesome/free-solid-svg-icons": "^6.2.1",
 		"@sveltejs/adapter-static": "^1.0.4",
 		"katex": "^0.16.4",
 		"svelte-fa": "^3.0.3",

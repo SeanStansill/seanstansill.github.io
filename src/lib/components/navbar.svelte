@@ -16,7 +16,6 @@
 		{ label: 'CV', href: '/CV' },
 		{ label: 'Projects', href: '/projects' },
 		{ label: 'Magnetism', href: '/magnetism' },
-		{ label: 'Blog', href: '/blog' },
 		{ label: 'About', href: '/about' }
 	];
 	let scroll;

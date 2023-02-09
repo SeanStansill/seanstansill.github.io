@@ -10,7 +10,8 @@ const config = {
 		alias: {
 			'@components': path.resolve('./src/lib/components'),
 			'@assets': path.resolve('./public'),
-			'@src': path.resolve('./src')
+			'@src': path.resolve('./src'),
+			'@static': path.resolve('./static')
 		}
 	}
 };

@@ -3,8 +3,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 ///
 // This means only these variables need to be changed to change the whole website
-$outermargin: 20%;
+$outermargin: 10%;
 $innermargin: 30%;
+$papermax: 50%;
 $elementtopmargin: 20px;
 $elementwidth: 800px;
 
@@ -36,6 +37,8 @@ $elementwidth: 800px;
 	@extend .smui-accordion;
 	margin: 0 auto 24px;
 	margin-top: $elementtopmargin;
+	position:absolute;
+	z-index: -1;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -49,6 +52,8 @@ $elementwidth: 800px;
 	margin-top: $elementtopmargin;
 	max-width: $elementwidth;
 	margin: 0 auto 24px;
+	position:relative;
+	z-index: 0;
 }
 
 .smui-accordion {
@@ -56,6 +61,8 @@ $elementwidth: 800px;
 	margin-top: $elementtopmargin;
 	max-width: $elementwidth;
 	margin: 0 auto 24px;
+	position:absolute;
+	z-index: -1;
 }
 
 // If changing edge, also need to change navbarWidth in navbar_desktop.svelte
@@ -66,10 +73,20 @@ $elementwidth: 800px;
 	margin-left: $outermargin;
 	margin-right: $outermargin;
 }
-
 .innerEdge {
 	margin-left: $innermargin;
 	margin-right: $innermargin;
+}
+.innerEdgeCentred {
+	margin-left: $innermargin;
+	margin-right: $innermargin;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.outerEdgeCentred {
+	margin-left: $outermargin;
+	margin-right: $outermargin;
 }
 .leftEdge {
 	margin-left: $innermargin;

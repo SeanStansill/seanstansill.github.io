@@ -10,3 +10,5 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 /static/smui.css
 /static/smui-dark.css
+/local_files
+/.vscode

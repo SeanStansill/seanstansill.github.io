@@ -11,10 +11,11 @@
 
 	let Si = `\\mathbf{\\mathrm{S}}_i`;
 	let Hi = `\\mathbf{\\mathrm{H}}_i`;
+	let muS = `\\frac{1}{\\mu_{s,i}}`;
 
-	let Heff = `\\mathbf{\\mathrm{H}}_i = \\frac{\\partial E}{\\partial \\mathbf{\\mathrm{S}}_i}`
+	let Heff = `\\mathbf{\\mathrm{H}}_i = \\mathbf{\\mathrm{\\xi}}_i - \\frac{1}{\\mu_{s,i}}\\frac{\\partial \\mathcal{H}}{\\partial \\mathbf{\\mathrm{S}}_i}`
 
-	let llg = `\\frac{\\partial {\\mathbf{\\mathrm{S}}_i}}{\\partial t} = - |\\gamma|
+	let llg = `\\frac{1}{\\mu_{s,i}}\\frac{\\partial {\\mathbf{\\mathrm{S}}_i}}{\\partial t} = - |\\gamma|
     \\left[ \\mathbf{\\mathrm{S}}_i \\times \\mathbf{\\mathrm{H}}_i + \\alpha \\mathbf{\\mathrm{S}}_i
     \\times \\left(\\mathbf{\\mathrm{S}}_i \\times \\mathbf{\\mathrm{H}}_i\\right) \\right]`;
 
@@ -29,43 +30,47 @@
 <Banner {image_url}/>
 
 <div style= 'margin-top: 10px'>
-	<Accordion style='z-index:0'>
-		<Panel>
-			<Header>TL;DR</Header>
-			<Content>
-				My PhD is at the intersection of computer science, maths, and physics.
-				I create, maintain and develop computer programs that simulate magnetic materials at the atomic level by solving 
-				systems of stochastic differential equations (sometimes millions simultaneously). These are deployed on HPC 
-				systems using CPU and GPU resources. I'm highly experienced in C++ and CUDA for production simulations,
-				and high-performance Python for prototyping new algorithms, signal processing, symbolic maths, and data
-				analysis and visualisation. I also use high level mathematics, physics and quantum mechanics to develop
-				new highly efficient algorithms and create new theories.<br/>
-				<br/>
-				This is my software stack:
-				<ul>
-					<li> C++ </li>
-					<li> CUDA </li>
-					<li> CMake </li>
-					<li> BASH </li>
-					<li> Python: </li>
+	<Paper style='z-index:0'>
+		<Title>TL;DR</Title>
+		<Content>
+			My PhD is at the intersection of computer science, maths, and physics.
+			I create, maintain and develop computer programs that simulate magnetic materials at the atomic level by solving 
+			systems of stochastic differential equations (sometimes millions simultaneously). These are deployed on HPC 
+			systems using CPU and GPU resources. I'm highly experienced in C++ and CUDA for production simulations,
+			and high-performance Python for prototyping new algorithms, signal processing, symbolic maths, and data
+			analysis and visualisation. I also use high level mathematics, physics and quantum mechanics to develop
+			new highly efficient algorithms and create new theories.<br/>
+			<br/>
+			<Accordion>
+				<Panel>
+					<Header>Software Stack</Header>
+					<Content>
 						<ul>
-							<li> Numpy </li>
-							<li> Matplotlib </li>
-							<li> Pandas </li>
-							<li> SciPy </li>
-							<li> lmfit </li>
-							<li> Numba </li>
-							<li> SymPy </li>
-							<li> Glob </li>
-							<li> Cython </li>
-							<li> h5 </li>
+							<li> C++ </li>
+							<li> CUDA </li>
+							<li> CMake </li>
+							<li> BASH </li>
+							<li> Python: </li>
+								<ul>
+									<li> Numpy </li>
+									<li> Matplotlib </li>
+									<li> Pandas </li>
+									<li> SciPy </li>
+									<li> lmfit </li>
+									<li> Numba </li>
+									<li> SymPy </li>
+									<li> Glob </li>
+									<li> Cython </li>
+									<li> h5 </li>
+								</ul>
+							<li> Vagrant </li>
+							<li> Job schedulers (SGE and Slurm) </li>
 						</ul>
-					<li> Vagrant </li>
-					<li> Job schedulers (SGE and Slurm) </li>
-				</ul>
-			</Content>
-		</Panel>
-	</Accordion>
+					</Content>
+				</Panel>
+			</Accordion>
+		</Content>
+		</Paper>
 </div>
 
 
@@ -120,10 +125,12 @@
 				<Header>Landau-Liftshiz Equation</Header>
 				<Content>
 					<Katex equation={llg} displayMode/>
-					where <Katex equation={Si}/> is the classical spin vector for the <Katex equation={'i'}/> spin, <Katex equation={Hi}/> is
-					the effective magnetic field (<Katex equation={Heff}/>) which contains information about the magnetic interactions, 
-					<Katex equation='\gamma'/> is the gyromagnetic ratio of an electron, and <Katex equation='\alpha'/> is the 
-					dimensionless damping parameter.
+					where <Katex equation={Si}/> is the classical spin vector for the <Katex equation={'i'}/> spin, <Katex equation={muS}/>
+					is the spin magnetic moment of site <Katex equation={'i'}/>, <Katex equation={Hi}/> is the effective magnetic field 
+					(<Katex equation={Heff}/>) which contains information about the magnetic interactions (<Katex equation={`\\mathbf{\\mathrm{\\mathcal{H}}}`}/>)
+					 and thermal fluctuations (<Katex equation={`\\mathbf{\\mathrm{\\xi}}_i`}/>), <Katex equation='\gamma'/> is the gyromagnetic ratio of an electron,
+					and <Katex equation='\alpha'/> is the dimensionless damping parameter. For a detailed discussion on this equation see 
+					<a href='https://arxiv.org/pdf/1505.07367.pdf'>here</a>.
 				</Content>
 			</Panel>
 		</Accordion>

@@ -16,9 +16,9 @@
 				<li>Sveltekit</li>
 				<li>SCSS</li>
 			</ul>
-			Svelte Material UI&ndash;a component library&ndash;was also used. The site is fully accessible
-			and reactive to the device visiting the page. Scientific literature has been cited throughout the site,
-			all links are to open-access versions of the publications for accessibility purposes.<br/>
+			Svelte Material UI&ndash;a component library&ndash;was also used. The site is accessible (even the maths!)
+			and reactive to the device visiting the page. Scientific literature has been cited throughout the site;
+			all links are open-access versions of the publications for accessibility.<br/>
 			<br/>
 			This site has been built with the environment in mind&ndash;only the most lightweight and efficient 
 			technologies have been used, and media has been heavily optimised. See below to check out how much 
@@ -27,9 +27,9 @@
 	</Paper>
 </div>
 
-<div class="innerEdge" style="margin: 0 auto 24px; margin-top:24px;">
-	<div id="wcb" class="carbonbadge wcb" />
-	<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+<div class='innerEdge' style='margin: 0 auto 24px; margin-top:24px;'>
+	<div id='wcb' class='carbonbadge wcb' />
+	<script src='https://unpkg.com/website-carbon-badges@1.1.3/b.min.js' defer></script>
 </div>
 
 <div>

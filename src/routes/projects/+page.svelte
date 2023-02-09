@@ -16,8 +16,7 @@
 	<Paper square elevation='4' color='secondary'>
 		<Title>Projects</Title>
 		<Content>
-			This section contains notes on a few of my projects. If it's an open-source coding project,
-			there will be a link to the GitHub repository.
+			This section contains notes on a few of my projects. You can find my open source projects can be found on my GitHub!
 		</Content>
 	</Paper>
 </div>
@@ -101,8 +100,7 @@
 			ones here:
 			<ul>
 				<li>A stock screener written in Python and uses my own algorithms to determine the value of an asset.</li>
-				<li>Solutions to quantum problems using the quantum Python libraries Qiskit and Q# (I'm training for the <a href='https://www.ibm.com/blogs/research/2021/03/quantum-developer-certification/'>
-					quantum developer certificate</a>).</li>
+				<li>Solutions to quantum problems using the quantum Python libraries Qiskit and Q#.</li>
 				<li>A web3 app written in Rust.</li>
 			</ul>
 			I love using programming as a tool to make useful applications that automate tasks, scale calculations beyond what is humanly capable, and creating minimalist and intuitive visualisations and user interfaces. <br/>
@@ -118,8 +116,6 @@
 				<li>Svelte</li>
 				<li>BASH</li>
 				<li>CMake</li>
-				<li></li>
-
 			</ul>
 		</Content>
 	</Paper>

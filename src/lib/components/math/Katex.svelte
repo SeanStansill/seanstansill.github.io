@@ -7,7 +7,8 @@
 	
 	const options = {
 		displayMode: displayMode,
-		throwOnError: false
+		throwOnError: false,
+        output: 'htmlAndMathml'
 	}
 
     // Make a reactive variable here. This allows an element to be rerendered in real time
@@ -27,4 +28,6 @@
 
 </svelte:head>
 
-{@html katexString}
+<span role='math'>
+    {@html katexString}
+</span>

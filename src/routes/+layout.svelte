@@ -1,5 +1,5 @@
 <script>
-	import NavBar from '@components/navbar.svelte';
+	import NavBar from '@components/navbar/navbar.svelte';
 </script>
 
 <NavBar/>

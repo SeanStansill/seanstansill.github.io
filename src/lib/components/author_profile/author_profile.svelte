@@ -3,8 +3,8 @@
     // in the margin for desktop, or as a header for mobile (maybe then remove banner)
 
 	import { isMobile } from '@components/isMobile';
-	import ProfileDesktop from '@components/profile_desktop.svelte';
-	import ProfileMobile from '@components/profile_mobile.svelte';
+	import ProfileDesktop from '@components/author_profile/profile_desktop.svelte';
+	import ProfileMobile from '@components/author_profile/profile_mobile.svelte';
 
 	// Pick which view dependent on the device viewport
 	let selectedNav;

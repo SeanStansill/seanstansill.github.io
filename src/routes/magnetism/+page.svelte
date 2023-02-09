@@ -1,8 +1,8 @@
 <script>
 	import Accordion, { Panel, Header } from '@smui-extra/accordion';
-	import Katex from '@components/Katex.svelte';
+	import Katex from '@components/math/Katex.svelte';
 	import Paper, { Title, Content } from '@smui/paper';
-	import Banner from '@components/banner.svelte';
+	import Banner from '@components/banner/banner.svelte';
 
 	const image_url = '/images/blackboard_medium.jpg';
 	//const image_url = '/images/hdd_medium_cropped.jpg';
@@ -107,7 +107,7 @@
 			is the only way to include temperature by using random numbers (often called a stochastic
 			process), which means these simulations can predict finite temperature behaviour very accurately.<br />
 			<br/>
-			The equation of motion my simulations solve is called the <a href='#llg' on:click={() => (llg_open = true)}>Landau-Liftshiz equation</a>.
+			The equation of motion my simulations solve is the <a href='#llg' on:click={() => (llg_open = true)}>Landau-Liftshiz equation</a>.
 			Each magnetic moment has its own equation (denoted <Katex equation='i'/>), and which is coupled to others via the magnetic
 			interactions.
 		</Content>

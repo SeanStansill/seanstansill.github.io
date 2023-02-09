@@ -1,8 +1,8 @@
 <script>
 	import Paper, { Title, Content } from '@smui/paper';
-	import Banner from '@components/banner.svelte';
+	import Banner from '@components/banner/banner.svelte';
 	import { listen } from 'svelte/internal';
-	import AuthorProfile from '@components/author_profile.svelte';
+	import AuthorProfile from '@components/author_profile/author_profile.svelte';
 
 	const image_url = '/images/diy.jpg';
 	
@@ -109,7 +109,7 @@
 			<br/>
 			Here are some of the tools and programming languages I've used to make projects:
 			<ul>
-				<!-- Add icons here -->
+				<!-- Add Fontawesome icons here -->
 				<li>C++</li>
 				<li>CUDA</li>
 				<li>Python</li>

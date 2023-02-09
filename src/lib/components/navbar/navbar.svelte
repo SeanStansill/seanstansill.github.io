@@ -2,8 +2,8 @@
 	// Svelte component which creates a responsive floating navigation bar
 
 	import { isMobile } from '@components/isMobile';
-	import NavbarDesktop from '@components/navbar_desktop.svelte';
-	import NavbarMobile from '@components/navbar_mobile.svelte';
+	import NavbarDesktop from '@components/navbar/navbar_desktop.svelte';
+	import NavbarMobile from '@components/navbar/navbar_mobile.svelte';
 
 	// Reactive blocks are the cleanest implementation
 	let selectedNav;

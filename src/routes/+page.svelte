@@ -1,8 +1,8 @@
 <script>
 	import Paper, { Title, Content } from '@smui/paper';
     import List, { Item } from '@smui/list';
-	import Banner from '@components/banner.svelte';
-	import AuthorProfile from '@components/author_profile.svelte';
+	import Banner from '@components/banner/banner.svelte';
+	import AuthorProfile from '@components/author_profile/author_profile.svelte';
     import Fa from 'svelte-fa';
     import { faPython, faSquareJs } from '@fortawesome/free-brands-svg-icons';
     import { faMicrochip, faMagnet, faBrain, faCode, faTerminal, faPieChart, faPersonChalkboard } from '@fortawesome/free-solid-svg-icons';

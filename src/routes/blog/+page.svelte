@@ -1,6 +1,6 @@
 <script>
 	import Paper, { Title, Content } from '@smui/paper';
-	import AuthorProfile from '@components/author_profile.svelte';
+	import AuthorProfile from '@components/author_profile/author_profile.svelte';
 	
 	let paperStyle = 'background-color: var(--mdc-theme-background, #f8f8f8);';
 </script>

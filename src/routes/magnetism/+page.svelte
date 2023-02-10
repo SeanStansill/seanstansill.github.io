@@ -3,11 +3,15 @@
 	import Katex from '@components/math/Katex.svelte';
 	import Paper, { Title, Content } from '@smui/paper';
 	import Banner from '@components/banner/banner.svelte';
+	import { isDark } from '@components/isDark';
 
 	const image_url = '/images/blackboard_medium.jpg';
 	//const image_url = '/images/hdd_medium_cropped.jpg';
 
-	let paperStyle = 'background-color: var(--mdc-theme-background, #f8f8f8); z-index:0;';
+	let paperStyleDark;'background-color: var(--mdc-theme-background, #888888);';
+	let paperStyleLight = 'background-color: var(--mdc-theme-background, #f8f8f8);';
+
+	let paperStyle = $isDark ? paperStyleDark : paperStyleLight;
 
 	let Si = `\\mathbf{\\mathrm{S}}_i`;
 	let Hi = `\\mathbf{\\mathrm{H}}_i`;

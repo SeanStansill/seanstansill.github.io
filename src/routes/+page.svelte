@@ -6,6 +6,15 @@
     import Fa from 'svelte-fa';
     import { faPython, faSquareJs } from '@fortawesome/free-brands-svg-icons';
     import { faMicrochip, faMagnet, faBrain, faCode, faTerminal, faPieChart, faPersonChalkboard } from '@fortawesome/free-solid-svg-icons';
+	import { isDark } from '@components/isDark';
+
+
+	let paperStyleDark = 'background-color: var(--mdc-theme-background, #888888);';
+	let paperStyleLight = 'background-color: var(--mdc-theme-background, #f8f8f8);';
+
+	let paperStyle;
+
+	$: paperStyle = $isDark ? paperStyleDark : paperStyleLight;
 
 	const image_url = '/images/galway_coral_beach4.jpg';
 	//const image_url = '/images/brimham_rocks2.jpg';
@@ -20,7 +29,7 @@
 
 <div class='mdc-typography--button' style='font-size:36px;'>
 	<div class='body_paper'>
-		<Paper  square elevation='4'  style='background-color: var(--mdc-theme-background, #f8f8f8); text-align:center;'>
+		<Paper  square elevation='4'  style='{paperStyle} text-align:center;'>
 			<strong>Sean Stansill</strong>
 		</Paper>
 	</div>
@@ -29,7 +38,7 @@
 
 
 	<div class='body_paper'>
-		<Paper  square elevation='1'  style='background-color: var(--mdc-theme-background, #f8f8f8); text-align:center;'>
+		<Paper  square elevation='1'  style='{paperStyle} text-align:center;'>
 			<div style='display:flex;'>
 
 				<!-- Loop through each item in the nav-bar -->

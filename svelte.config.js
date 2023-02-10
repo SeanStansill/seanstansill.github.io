@@ -6,7 +6,11 @@ import preprocess from 'svelte-preprocess';
 const config = {
 	preprocess: preprocess(),
 	kit: {
-		adapter: staticAdapter({}),
+		adapter: staticAdapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: null
+		}),
 		alias: {
 			'@components': path.resolve('./src/lib/components'),
 			'@assets': path.resolve('./public'),

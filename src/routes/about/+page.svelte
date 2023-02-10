@@ -1,6 +1,7 @@
 <script>
 	import Paper, { Title, Content } from '@smui/paper';
 	import { isDark } from '@components/isDark';
+	import Carbonbadge from "svelte-carbonbadge";
 
 	
 	let paperStyleDark;'background-color: var(--mdc-theme-background, #888888);';
@@ -34,8 +35,7 @@
 </div>
 
 <div class='innerEdge' style='margin: 0 auto 24px; margin-top:24px;'>
-	<div id='wcb' class='carbonbadge wcb' />
-	<script src='https://unpkg.com/website-carbon-badges@1.1.3/b.min.js' defer></script>
+	<Carbonbadge/>
 </div>
 
 <div>

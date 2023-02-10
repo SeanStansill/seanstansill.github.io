@@ -3,11 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-<<<<<<< HEAD
 		"deploy": "node ./gh-pages.js",
-=======
-		"deploy": "node ./gh-pages.js"
->>>>>>> parent of 63fcdca (Build the site)
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",

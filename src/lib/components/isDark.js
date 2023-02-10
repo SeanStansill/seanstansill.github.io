@@ -2,8 +2,6 @@ import { readable } from 'svelte/store'
 
 // Default to light
 export const isDark = readable(false, (set) => {
-	if (typeof window === 'undefined') return () => {};
-	
 	// MediaQueryList
 	const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
 	

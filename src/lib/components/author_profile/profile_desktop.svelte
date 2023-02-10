@@ -3,6 +3,14 @@
     import { faLinkedin, faGithub, faOrcid } from '@fortawesome/free-brands-svg-icons';
     import List, { Item, Text } from '@smui/list';
     import Button, { Label } from '@smui/button';
+    import { isDark } from '@components/isDark';
+
+	let iconStyle;
+
+    let iconStyleDark = 'color:white;';
+    let iconStyleLight = 'color:black;';
+
+	$: iconStyle = $isDark ? iconStyleDark : iconStyleLight;
 
     let scroll;
     let yOrigin = 500;
@@ -30,10 +38,10 @@
     </a>
 
     <div>
-        <List>
-            <a href="https://www.linkedin.com/in/seanstansill/" style='color:black; text-decoration: none!important;'><Item><Fa icon={faLinkedin} scale={1.2} /> &nbsp; LinkedIn</Item></a>
-            <a href="https://github.com/seanstansill" style='color:black; text-decoration: none!important;'><Item><Fa icon={faGithub} scale={1.2} /> &nbsp; GitHub</Item></a>
-            <a href="https://orcid.org/0000-0002-4658-6559" style='color:black; text-decoration: none!important;'><Item><Fa icon={faOrcid} scale={1.2} /> &nbsp; Ocrid</Item></a>
+        <List style={iconStyle}>
+            <a href="https://www.linkedin.com/in/seanstansill/" style='{iconStyle} text-decoration: none!important;'><Item><Fa icon={faLinkedin} scale={1.2} /> &nbsp; LinkedIn</Item></a>
+            <a href="https://github.com/seanstansill" style='{iconStyle} text-decoration: none!important;'><Item><Fa icon={faGithub} scale={1.2} /> &nbsp; GitHub</Item></a>
+            <a href="https://orcid.org/0000-0002-4658-6559" style='{iconStyle} text-decoration: none!important;'><Item><Fa icon={faOrcid} scale={1.2} /> &nbsp; Ocrid</Item></a>
         </List>
     </div>
 </div>

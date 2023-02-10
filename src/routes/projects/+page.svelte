@@ -3,10 +3,14 @@
 	import Banner from '@components/banner/banner.svelte';
 	import { listen } from 'svelte/internal';
 	import AuthorProfile from '@components/author_profile/author_profile.svelte';
+	import { isDark } from '@components/isDark';
 
 	const image_url = '/images/diy.jpg';
 	
-	let paperStyle = 'background-color: var(--mdc-theme-background, #f8f8f8);';
+	let paperStyleDark;'background-color: var(--mdc-theme-background, #888888);';
+	let paperStyleLight = 'background-color: var(--mdc-theme-background, #f8f8f8);';
+
+	let paperStyle = $isDark ? paperStyleDark : paperStyleLight;
 </script>
 
 <Banner {image_url}/>

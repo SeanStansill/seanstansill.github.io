@@ -1,7 +1,13 @@
 <script>
 	import Paper, { Title, Content } from '@smui/paper';
+	import { isDark } from '@components/isDark';
 
-	let paperStyle = 'background-color: var(--mdc-theme-background, #f8f8f8);';
+	
+	let paperStyleDark;'background-color: var(--mdc-theme-background, #888888);';
+	let paperStyleLight = 'background-color: var(--mdc-theme-background, #f8f8f8);';
+
+	let paperStyle = $isDark ? paperStyleDark : paperStyleLight;
+	
 </script>
 
 <div>

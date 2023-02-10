@@ -4,6 +4,15 @@
 	import Button, { Label } from '@smui/button';
 	import IconButton from '@smui/icon-button';
 
+	export let isDark;
+
+	let bgStyle;
+
+    let bgStyleDark = 'background-color:#444444;';
+    let bgStyleLight = '';
+
+	$: bgStyle = $isDark ? bgStyleDark : bgStyleLight;
+
 	let menu: Menu;
 
 	// Import the list of navigation items from the navbar

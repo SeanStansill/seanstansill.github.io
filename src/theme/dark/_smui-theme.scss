@@ -30,7 +30,7 @@ $elementwidthMobile: 95%;
 .smui-paper-mobile {
 	background-color: var(--mdc-theme-background, #888888);
 	margin-top: $elementtopmargin;
-	max-width: $elementwidthMobile;
+	width: $elementwidthMobile;
 	width: $elementwidthMobile;
 	margin: 0 auto 24px;
 	position:relative;
@@ -39,7 +39,7 @@ $elementwidthMobile: 95%;
 
 .smui-accordion-mobile {
 	margin-top: $elementtopmargin;
-	max-width: $elementwidthMobile;
+	width: $elementwidthMobile;
 	width: $elementwidthMobile;
 	margin: 0 auto 24px;
 	position:absolute;
@@ -55,7 +55,7 @@ $elementwidthMobile: 95%;
 	@extend .smui-paper;
 	background-color: var(--mdc-theme-background, #888888);
 	margin-top: $elementtopmargin;
-	max-width: $elementwidthDesktop;
+	width: $elementwidthDesktop;
 	margin: 0 auto 24px;
 	position:relative;
 	z-index: 0;
@@ -64,7 +64,7 @@ $elementwidthMobile: 95%;
 .smui-accordion {
 	@extend .smui-accordion;
 	margin-top: $elementtopmargin;
-	max-width: $elementwidthDesktop;
+	width: $elementwidthDesktop;
 	margin: 0 auto 24px;
 	position:absolute;
 	z-index: -1;

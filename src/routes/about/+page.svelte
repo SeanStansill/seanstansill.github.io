@@ -1,26 +1,20 @@
 <script>
 	import Paper, { Title, Content } from '@smui/paper';
-	import { isDark } from '@components/isDark';
 	import { isMobile } from '@components/isMobile';
 	import Carbonbadge from "svelte-carbonbadge";
 
 	
 	// Customization of SMUI elements
-	let paperSizeMobile = 'max-width:95%;';
-	let paperSizeDesktop = '';
+	let paperSizeMobile = 'width:90%;';
+	let paperSizeDesktop = 'width:40%;';
 
 	$: paperSize = $isMobile ? paperSizeMobile : paperSizeDesktop;
-
-	let paperStyleDark = 'background-color: var(--mdc-theme-background, #888888);';
-	let paperStyleLight = 'background-color: var(--mdc-theme-background, #f8f8f8);';
-
-	$: paperStyle = $isDark ? paperStyleDark : paperStyleLight;
 	// End of customization
 	
 </script>
 
 <div>
-	<Paper square elevation='4' style='{paperStyle} {paperSize}'>
+	<Paper square elevation='4' style='{paperSize}'>
 		<Title>The Website</Title>
 		<Content>
 			This website was built using the following tech stack:
@@ -47,7 +41,7 @@
 </div>
 
 <div>
-	<Paper square style='{paperStyle} {paperSize}'>
+	<Paper square style='{paperSize}'>
 		<Title>Mission Statement</Title>
 		<Content>
 			I made this website because I want to better advertise myself &ndash; my job role is a postgraduate researcher

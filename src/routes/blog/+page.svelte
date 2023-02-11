@@ -6,16 +6,10 @@
 
 	
 	// Customization of SMUI elements
-	let paperSizeMobile = 'max-width:95%;';
-	let paperSizeDesktop = '';
+	let paperSizeMobile = 'width:90%;';
+	let paperSizeDesktop = 'width:40%;';
 
 	$: paperSize = $isMobile ? paperSizeMobile : paperSizeMobile;
-	
-	
-	let paperStyleDark;'background-color: var(--mdc-theme-background, #888888);';
-	let paperStyleLight = 'background-color: var(--mdc-theme-background, #f8f8f8);';
-
-	$: paperStyle = $isDark ? paperStyleDark : paperStyleLight;
 	// End of customization
 	
 </script>
@@ -23,7 +17,7 @@
 <AuthorProfile/>
 
 <div>
-	<Paper square elevation='4' style='{paperStyle} {paperSize}'>
+	<Paper square elevation='4' style='{paperSize}'>
 		<!-- Does this sound like I'm being mean? -->
 		<Title>Under Construction</Title>
 		<Content>

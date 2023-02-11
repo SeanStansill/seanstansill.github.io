@@ -55,7 +55,7 @@ $elementwidthMobile: 95%;
 	background-color: var(--mdc-theme-background, #f8f8f8);
 	@extend .smui-paper;
 	margin-top: $elementtopmargin;
-	max-width: $elementwidthDesktop;
+	width: $elementwidthDesktop;
 	margin: 0 auto 24px;
 	position:relative;
 	z-index: 0;
@@ -64,7 +64,7 @@ $elementwidthMobile: 95%;
 .smui-accordion {
 	@extend .smui-accordion;
 	margin-top: $elementtopmargin;
-	max-width: $elementwidthDesktop;
+	width: $elementwidthDesktop;
 	margin: 0 auto 24px;
 	position:absolute;
 	z-index: -1;

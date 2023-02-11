@@ -49,10 +49,9 @@
 
 <style>
     .leftMarginBox {
-        margin-left: 11%;
+        margin-left: 14%;
         margin-top: 10px;
-        max-width: 11%;  
-        padding-right: 10%;
+        width: 11%;
         position: absolute;
         overflow: hidden;
         display: block;

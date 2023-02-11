@@ -3,26 +3,20 @@
 	import Katex from '@components/math/Katex.svelte';
 	import Paper, { Title, Content } from '@smui/paper';
 	import Banner from '@components/banner/banner.svelte';
-	import { isDark } from '@components/isDark';
 	import { isMobile } from '@components/isMobile';
 
 	const image_url = '/images/blackboard_medium.jpg';
 
 	// Customization of SMUI elements
-	let paperSizeMobile = 'max-width:95%;';
-	let paperSizeDesktop = '';
+	let paperSizeMobile = 'width:90%;';
+	let paperSizeDesktop = 'width:40%;';
 
-	$: paperSize = $isMobile ? paperSizeMobile : paperSizeMobile;
+	$: paperSize = $isMobile ? paperSizeMobile : paperSizeDesktop;
 
-	let accordionSizeMobile = 'max-width:95%;';
-	let accordionSizeDesktop = '';
+	let accordionSizeMobile = 'width:95%;';
+	let accordionSizeDesktop = 'width:55%';
 
-	$: accordionSize = $isMobile ? accordionSizeMobile : accordionSizeMobile;
-
-	let paperStyleDark;'background-color: var(--mdc-theme-background, #888888);';
-	let paperStyleLight = 'background-color: var(--mdc-theme-background, #f8f8f8);';
-
-	$: paperStyle = $isDark ? paperStyleDark : paperStyleLight;
+	$: accordionSize = $isMobile ? accordionSizeMobile : accordionSizeDesktop;
 	// End customization
 
 
@@ -48,7 +42,7 @@
 <Banner {image_url}/>
 
 <div style= 'margin-top: 10px'>
-	<Paper square elevation='4' style='{paperStyle} {paperSize} z-index:0;'>
+	<Paper square elevation='4' style='{paperSize} z-index:0;' color='secondary'>
 		<Title>TL;DR</Title>
 		<Content>
 			My PhD is at the intersection of computer science, maths, and physics.
@@ -59,8 +53,9 @@
 			analysis and visualisation. I also use high level mathematics, physics and quantum mechanics to develop
 			new highly efficient algorithms and create new theories.<br/>
 			<br/>
-			<Accordion style='{accordionSize}'>
-				<Panel>
+			<!-- Nested elements should not vary in size -->
+			<Accordion style='width:60%;'>
+				<Panel style='width:60%;'>
 					<Header>Software Stack</Header>
 					<Content>
 						<ul>
@@ -93,7 +88,7 @@
 
 
 <div>
-	<Paper square elevation='4' style='{paperStyle} {paperSize}'>
+	<Paper square elevation='4' style='{paperSize}'>
 		<!-- Does this sound like I'm being mean? -->
 		<Title>Magnetism for non-scientists</Title>
 		<Content>
@@ -139,7 +134,7 @@
 <div>
 	<a id='llg'>
 		<Accordion style='{accordionSize}'>
-			<Panel bind:open={llg_open}>
+			<Panel bind:open={llg_open} style='{accordionSize}'>
 				<Header>Landau-Liftshiz Equation</Header>
 				<Content>
 					<Katex equation={llg} displayMode/>
@@ -155,7 +150,7 @@
 	</a>
 </div>
 <div>
-	<Paper square elevation='4' style='{paperStyle} {paperSize}'>
+	<Paper square elevation='4' style='{paperSize}'>
 	<Content>
 		In maths, this problem is called a system of linear differential equations. Small systems can be solved analytically (by hand using algebra)
 		but here the system is too large, and it is <em>stochastic</em> which means it must be solved numerically (approximate solutions using numbers instead
@@ -175,7 +170,7 @@
 <div>
 	<a id='hamiltonian'>
 		<Accordion style='{accordionSize}'>
-			<Panel bind:open={hamiltonian_open}>
+			<Panel bind:open={hamiltonian_open} style='{accordionSize}'>
 				<Header>Example Hamiltonian</Header>
 				<Content>
 					<Katex equation={hamiltonian} displayMode/>

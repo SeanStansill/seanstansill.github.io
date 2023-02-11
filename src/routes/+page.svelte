@@ -6,7 +6,6 @@
     import Fa from 'svelte-fa';
     import { faPython, faSquareJs } from '@fortawesome/free-brands-svg-icons';
     import { faMicrochip, faMagnet, faBrain, faCode, faTerminal, faPieChart, faPersonChalkboard } from '@fortawesome/free-solid-svg-icons';
-	import { isDark } from '@components/isDark';
 	import { isMobile } from '@components/isMobile';
 
 	const image_url = '/images/galway_coral_beach4.jpg';
@@ -14,17 +13,10 @@
 
 
 	// Customization of SMUI elements
-	let paperSizeMobile = 'max-width:95%;';
-	let paperSizeDesktop = '';
+	let paperSizeMobile = 'width:90%;';
+	let paperSizeDesktop = 'width:40%;';
 
 	$: paperSize = $isMobile ? paperSizeMobile : paperSizeDesktop;
-
-	let paperStyleDark = 'background-color: var(--mdc-theme-background, #888888);';
-	let paperStyleLight = 'background-color: var(--mdc-theme-background, #f8f8f8);';
-
-	let paperStyle;
-
-	$: paperStyle = $isDark ? paperStyleDark : paperStyleLight;
 	// End customization
 
 	
@@ -37,46 +29,32 @@
 </div>
 
 <div class='mdc-typography--button' style='font-size:36px;'>
-	<div class='body_paper'>
-		<Paper  square elevation='4'  style='{paperStyle} {paperSize} text-align:center;'>
-			<strong>Sean Stansill</strong>
-		</Paper>
-	</div>
+	<Paper  square elevation='4'  style='{paperSize} text-align:center;'>
+		<strong>Sean Stansill</strong>
+	</Paper>
 </div>
 
 
 
-	<div class='body_paper'>
-		<Paper  square elevation='1'  style='{paperStyle} {paperSize} text-align:center;'>
-			<div style='display:flex;'>
+<Paper  square elevation='1'  style='{paperSize} text-align:center;'>
+	<div style='display:flex;'>
 
-				<!-- Loop through each item in the nav-bar -->
-				{#each iconsAndLabels as item}
-					<div class='icon_container'>
-						<br/>
-						<Fa icon={item[0]} scale={3.0}/>
-						<br/>
-						<br/>
-						<br/>
-						<div class="mdc-typography--subtitle1" style='font-size:18px;'>{item[1]}</div>
-						<br/>
-					</div>
-				{/each}
+		<!-- Loop through each item in the nav-bar -->
+		{#each iconsAndLabels as item}
+			<div class='icon_container'>
+				<br/>
+				<Fa icon={item[0]} scale={3.0}/>
+				<br/>
+				<br/>
+				<br/>
+				<div class="mdc-typography--subtitle1" style='font-size:18px;'>{item[1]}</div>
+				<br/>
 			</div>
-		</Paper>
+		{/each}
 	</div>
+</Paper>
 
 <style>
-	.body_paper {
-	width: 40%;
-	height:400px;
-	display: inline;
-	padding-left:30%;
-	padding-top:0;
-	position:relative;
-	overflow: hidden;
-	margin: 0 auto;
-	}
 	.icon_container {
 	display: inline;
 	position:relative;

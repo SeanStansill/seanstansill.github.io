@@ -2,27 +2,25 @@
 	import Paper, { Title, Content } from '@smui/paper';
 	import Banner from '@components/banner/banner.svelte';
 	import AuthorProfile from '@components/author_profile/author_profile.svelte';
-	import { isDark } from '@components/isDark';
 	import { isMobile } from '@components/isMobile';
 
 	const image_url = '/images/diy.jpg';
 
-	let paperClassMobile = 'smui-paper-mobile';
-	let paperClassDesktop = 'smui-paper';
+	// Customization of SMUI elements
+	let paperSizeMobile = 'width:90%;';
+	let paperSizeDesktop = 'width:40%;';
 
-	$: paperClass = $isMobile ? paperClassMobile : paperClassMobile;
-	
-	let paperStyleDark;'background-color: var(--mdc-theme-background, #888888);';
-	let paperStyleLight = 'background-color: var(--mdc-theme-background, #f8f8f8);';
+	$: paperSize = $isMobile ? paperSizeMobile : paperSizeDesktop;
+	// End customization
 
-	$: paperStyle = $isDark ? paperStyleDark : paperStyleLight;
 </script>
 
 <Banner {image_url}/>
 <AuthorProfile/>
 
 <div>
-	<Paper square elevation='4' class={paperClass} color='secondary'>
+	<!-- Don't style this like the others. Change color to secondary-->
+	<Paper square elevation='4' style='{paperSize}' color='secondary'>
 		<Title>Projects</Title>
 		<Content>
 			This section contains notes on a few of my projects. You can find my open source projects can be found on my GitHub!
@@ -33,7 +31,7 @@
 <!-- Do I want to change these to clickable tiles or accordions or something? -->
 <!-- More intuitive to click on the project you'd like to read about -->
 <div>
-	<Paper square elevation='4' style={paperStyle}>
+	<Paper square elevation='4' style='{paperSize}'>
 		<Title>Atomistic Spin Dynamics</Title>
 		<Content>
 			Throughout my PhD I've been working on a closed-source atomistic spin dynamics code.
@@ -61,7 +59,7 @@
 </div>
 
 <div>
-	<Paper square elevation='4' style={paperStyle}>
+	<Paper square elevation='4' style={paperSize}>
 		<Title>Quantum Computing (TBC)</Title>
 		<Content>
 			<br />
@@ -101,7 +99,7 @@
 </div>
 
 <div>
-	<Paper square elevation='4' style={paperStyle}>
+	<Paper square elevation='4' style={paperSize}>
 		<Title>Programming</Title>
 		<Content>
 			<br />

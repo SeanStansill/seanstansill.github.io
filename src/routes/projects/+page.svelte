@@ -1,23 +1,28 @@
 <script>
 	import Paper, { Title, Content } from '@smui/paper';
 	import Banner from '@components/banner/banner.svelte';
-	import { listen } from 'svelte/internal';
 	import AuthorProfile from '@components/author_profile/author_profile.svelte';
 	import { isDark } from '@components/isDark';
+	import { isMobile } from '@components/isMobile';
 
 	const image_url = '/images/diy.jpg';
+
+	let paperClassMobile = 'smui-paper-mobile';
+	let paperClassDesktop = 'smui-paper';
+
+	$: paperClass = $isMobile ? paperClassMobile : paperClassMobile;
 	
 	let paperStyleDark;'background-color: var(--mdc-theme-background, #888888);';
 	let paperStyleLight = 'background-color: var(--mdc-theme-background, #f8f8f8);';
 
-	let paperStyle = $isDark ? paperStyleDark : paperStyleLight;
+	$: paperStyle = $isDark ? paperStyleDark : paperStyleLight;
 </script>
 
 <Banner {image_url}/>
 <AuthorProfile/>
 
 <div>
-	<Paper square elevation='4' color='secondary'>
+	<Paper square elevation='4' class={paperClass} color='secondary'>
 		<Title>Projects</Title>
 		<Content>
 			This section contains notes on a few of my projects. You can find my open source projects can be found on my GitHub!
@@ -28,7 +33,7 @@
 <!-- Do I want to change these to clickable tiles or accordions or something? -->
 <!-- More intuitive to click on the project you'd like to read about -->
 <div>
-	<Paper square elevation='4'  style={paperStyle}>
+	<Paper square elevation='4' style={paperStyle}>
 		<Title>Atomistic Spin Dynamics</Title>
 		<Content>
 			Throughout my PhD I've been working on a closed-source atomistic spin dynamics code.
@@ -56,7 +61,7 @@
 </div>
 
 <div>
-	<Paper square elevation='4'  style={paperStyle}>
+	<Paper square elevation='4' style={paperStyle}>
 		<Title>Quantum Computing (TBC)</Title>
 		<Content>
 			<br />
@@ -96,7 +101,7 @@
 </div>
 
 <div>
-	<Paper square elevation='4'  style={paperStyle}>
+	<Paper square elevation='4' style={paperStyle}>
 		<Title>Programming</Title>
 		<Content>
 			<br />

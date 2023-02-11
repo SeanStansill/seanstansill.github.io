@@ -4,14 +4,28 @@
 	import Paper, { Title, Content } from '@smui/paper';
 	import Banner from '@components/banner/banner.svelte';
 	import { isDark } from '@components/isDark';
+	import { isMobile } from '@components/isMobile';
 
 	const image_url = '/images/blackboard_medium.jpg';
-	//const image_url = '/images/hdd_medium_cropped.jpg';
+
+	// Customization of SMUI elements
+	let paperSizeMobile = 'max-width:95%;';
+	let paperSizeDesktop = '';
+
+	$: paperSize = $isMobile ? paperSizeMobile : paperSizeMobile;
+
+	let accordionSizeMobile = 'max-width:95%;';
+	let accordionSizeDesktop = '';
+
+	$: accordionSize = $isMobile ? accordionSizeMobile : accordionSizeMobile;
 
 	let paperStyleDark;'background-color: var(--mdc-theme-background, #888888);';
 	let paperStyleLight = 'background-color: var(--mdc-theme-background, #f8f8f8);';
 
-	let paperStyle = $isDark ? paperStyleDark : paperStyleLight;
+	$: paperStyle = $isDark ? paperStyleDark : paperStyleLight;
+	// End customization
+
+
 
 	let Si = `\\mathbf{\\mathrm{S}}_i`;
 	let Hi = `\\mathbf{\\mathrm{H}}_i`;
@@ -34,7 +48,7 @@
 <Banner {image_url}/>
 
 <div style= 'margin-top: 10px'>
-	<Paper style='z-index:0'>
+	<Paper square elevation='4' style='{paperStyle} {paperSize} z-index:0;'>
 		<Title>TL;DR</Title>
 		<Content>
 			My PhD is at the intersection of computer science, maths, and physics.
@@ -45,7 +59,7 @@
 			analysis and visualisation. I also use high level mathematics, physics and quantum mechanics to develop
 			new highly efficient algorithms and create new theories.<br/>
 			<br/>
-			<Accordion>
+			<Accordion style='{accordionSize}'>
 				<Panel>
 					<Header>Software Stack</Header>
 					<Content>
@@ -79,7 +93,7 @@
 
 
 <div>
-	<Paper square elevation='4'  style={paperStyle}>
+	<Paper square elevation='4' style='{paperStyle} {paperSize}'>
 		<!-- Does this sound like I'm being mean? -->
 		<Title>Magnetism for non-scientists</Title>
 		<Content>
@@ -124,7 +138,7 @@
 </div>
 <div>
 	<a id='llg'>
-		<Accordion >
+		<Accordion style='{accordionSize}'>
 			<Panel bind:open={llg_open}>
 				<Header>Landau-Liftshiz Equation</Header>
 				<Content>
@@ -141,7 +155,7 @@
 	</a>
 </div>
 <div>
-	<Paper square elevation='4'  style={paperStyle}>
+	<Paper square elevation='4' style='{paperStyle} {paperSize}'>
 	<Content>
 		In maths, this problem is called a system of linear differential equations. Small systems can be solved analytically (by hand using algebra)
 		but here the system is too large, and it is <em>stochastic</em> which means it must be solved numerically (approximate solutions using numbers instead
@@ -160,7 +174,7 @@
 </div>
 <div>
 	<a id='hamiltonian'>
-		<Accordion >
+		<Accordion style='{accordionSize}'>
 			<Panel bind:open={hamiltonian_open}>
 				<Header>Example Hamiltonian</Header>
 				<Content>

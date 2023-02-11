@@ -11,7 +11,7 @@
 
 	// Pick which view dependent on the device viewport
 	let selectedNav;
-	$: selectedNav = $isMobile ? BannerMobile : BannerDesktop;
+	$: selectedNav = $isMobile ? null : BannerDesktop;
 
 </script>
 

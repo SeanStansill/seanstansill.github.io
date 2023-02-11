@@ -1,10 +1,18 @@
 <script>
     import katex from 'katex';
+    import { isMobile } from '@components/isMobile';
     // Create a prop for the equation to be rendered
     // This is an input when the component is called
 	export let equation;
 	export let displayMode = false;
+
+    let mathFont;
+
+    let mathFontMobile = 'font-size:1em;'
+    let mathFontDesktop = 'font-size:1.21em;'
 	
+    $: mathFont = $isMobile ? mathFontMobile : mathFontDesktop;
+
 	const options = {
 		displayMode: displayMode,
 		throwOnError: false,
@@ -28,6 +36,12 @@
 
 </svelte:head>
 
-<span role='math'>
+<span role='math' style={mathFont}>
     {@html katexString}
 </span>
+
+<style>
+    :global(.katex) {
+        font-size: 1.1em !important;
+    }
+</style>

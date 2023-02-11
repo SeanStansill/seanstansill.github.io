@@ -11,18 +11,18 @@
 <!-- Add the banner-->
 <div>
     <a role='button' href='.'>
-        <img src='/images/profile_picture_small.png' alt='my headshot' style='width:20%; margin-top: 10px; display: block; margin: auto;'/>
+        <img src='/images/profile_picture.png' alt='my headshot' style='width:30%; margin-top: 10px; display: block; margin: auto;'/>
     </a>
 
     <Group style={navbarWidth}>
         <Button href='https://www.linkedin.com/in/seanstansill/' style='color:dimgrey; flex-grow: 1;' ripple={true}>
-            <Label><Fa icon={faLinkedin} scale={1.2} /> &nbsp; LinkedIn</Label>
+            <Label style='font-size:1.2em; text-align: center;'><Fa icon={faLinkedin} scale={1.2} /><br/>LinkedIn</Label>
         </Button>
         <Button href='https://github.com/seanstansill' style='color:dimgrey; flex-grow: 1;' ripple={true}>
-            <Label><Fa icon={faGithub} scale={1.2} /> &nbsp; GitHub</Label>
+            <Label style='font-size:1.2em; text-align: center;'><Fa icon={faGithub} scale={1.2} /><br/>GitHub</Label>
         </Button>
         <Button href='https://orcid.org/0000-0002-4658-6559' style='color:dimgrey; flex-grow: 1;' ripple={true}>
-            <Label><Fa icon={faOrcid} scale={1.2} /> &nbsp; Ocrid</Label>
+            <Label style='font-size:1.2em; text-align: center;'><Fa icon={faOrcid} scale={1.2} /><br/>Ocrid</Label>
         </Button>
     </Group>
 </div>

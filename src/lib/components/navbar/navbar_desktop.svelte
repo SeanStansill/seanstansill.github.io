@@ -9,7 +9,7 @@
 
 <Group style={navbarWidth}>
 	<!-- Acts as a home button-->
-	<Button href='.' style='width: 25%; font-size:95%; font-style: bold;'
+	<Button href='/' style='width: 25%; font-size:95%; font-style: bold;'
 		><Label>Sean Stansill</Label></Button
 	>
 	<!-- Loop through each item in the nav-bar -->

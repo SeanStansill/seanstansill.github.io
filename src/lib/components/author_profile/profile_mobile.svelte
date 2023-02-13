@@ -11,7 +11,7 @@
 <!-- Add the banner-->
 <div style='padding-top: 10px; padding-bottom: 10px;'>
     <a role='button' href='.'>
-        <img src='/images/profile_picture_small.png' alt='my headshot' style='width:30%; margin-top: 10px; display: block; margin: auto;'/>
+        <img src='/images/profile_picture.png' alt='my headshot' style='width:40%; margin-top: 10px; display: block; margin: auto;'/>
     </a>
 
     <Group style={profileWidth}>

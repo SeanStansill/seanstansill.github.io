@@ -7,6 +7,7 @@
     import { faPython, faSquareJs } from '@fortawesome/free-brands-svg-icons';
     import { faMicrochip, faMagnet, faBrain, faCode, faTerminal, faPieChart, faPersonChalkboard } from '@fortawesome/free-solid-svg-icons';
 	import { isMobile } from '@components/isMobile';
+	import { isDark } from '@components/isDark';
 
 	const image_url = '/images/galway_coral_beach4.jpg';
 	//const image_url = '/images/brimham_rocks2.jpg';
@@ -21,6 +22,13 @@
 
 	
 	let iconsAndLabels = [[faMicrochip, 'Scientist'],[faTerminal, 'Programmer'],[faPersonChalkboard, 'Teacher']];
+
+	let leedsMapUrlDark = '/images/UKLeeds.svg';
+	let leedsMapUrlLight = '/images/UKLeeds.svg';
+	
+	let leedsMapUrl;
+	$: leedsMapUrl = $isDark ? leedsMapUrlDark : leedsMapUrlLight;
+
 </script>
 
 <Banner {image_url}/>
@@ -51,6 +59,12 @@
 				<br/>
 			</div>
 		{/each}
+	</div>
+</Paper>
+
+<Paper square elevation='1' style='{paperSize}'>
+	<div style='display:flex; justify-content:center; '>
+		<img src={leedsMapUrl} width='50%' alt='A map of the UK with Leeds highlighted'/>
 	</div>
 </Paper>
 

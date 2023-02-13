@@ -23,7 +23,7 @@
 	<Paper square elevation='4' style='{paperSize}' color='secondary'>
 		<Title>Projects</Title>
 		<Content>
-			This section contains notes on a few of my projects. You can find my open source projects can be found on my GitHub!
+			This section contains notes on a few of my projects. You can find my open source projects on my GitHub!
 		</Content>
 	</Paper>
 </div>

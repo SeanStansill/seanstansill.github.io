@@ -17,6 +17,12 @@
 	let accordionSizeDesktop = 'width:55%';
 
 	$: accordionSize = $isMobile ? accordionSizeMobile : accordionSizeDesktop;
+
+
+	let innerAccordionSizeMobile = 'width:100%;';
+	let innerAccordionSizeDesktop = 'width:85%';
+
+	$: innerAccordionSize = $isMobile ? innerAccordionSizeMobile : innerAccordionSizeDesktop;
 	// End customization
 
 
@@ -54,8 +60,8 @@
 			new highly efficient algorithms and create new theories.<br/>
 			<br/>
 			<!-- Nested elements should not vary in size -->
-			<Accordion style='width:60%;'>
-				<Panel style='width:60%;'>
+			<Accordion style='{innerAccordionSize}'>
+				<Panel style='{innerAccordionSize}'>
 					<Header>Software Stack</Header>
 					<Content>
 						<ul>

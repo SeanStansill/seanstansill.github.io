@@ -19,7 +19,8 @@
 <style>
     .banner_desktop {
         width: 100%;
-        height:400px;
+        height:18vw;
+        max-height: 400px;
         object-fit: cover;
         object-position: center 10%;;
         overflow: hidden;

@@ -29,6 +29,8 @@
 	let leedsMapUrl;
 	$: leedsMapUrl = $isDark ? leedsMapUrlDark : leedsMapUrlLight;
 
+	let leedsGoogleUrl = 'https://www.google.com/maps/place/Leeds+UK';
+
 </script>
 
 <Banner {image_url}/>
@@ -64,7 +66,7 @@
 
 <Paper square elevation='1' style='{paperSize}'>
 	<div style='display:flex; justify-content:center; '>
-		<img src={leedsMapUrl} width='50%' alt='A map of the UK with Leeds highlighted'/>
+		<a href='{leedsGoogleUrl}' style='width:50%;'><img src={leedsMapUrl} width='100%' alt='A map of the UK with Leeds highlighted'/></a>
 	</div>
 </Paper>
 
